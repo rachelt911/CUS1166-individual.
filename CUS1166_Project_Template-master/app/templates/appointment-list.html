@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+<form method="POST">
+{% block content %}
+{% for appointment in appointments %}
+<p><b>ID: </b> {{appointment.id}} </p>
+<p><b>Start: </b> {{appointment.start}} </p>
+<p><b>End: </b> {{appointment.end}} </p>
+<p><b>Name: </b> {{appointment.name}} </p>
+<p><b>Location: </b> {{appointment.location}} </p>
+<p><b>Categories: </b> {{appointment.categories}} </p>
+<p>{{form.submit}}</p>
+{% endfor %}
+{% endblock %}
+</form>
